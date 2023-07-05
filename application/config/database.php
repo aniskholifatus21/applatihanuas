@@ -117,6 +117,10 @@ $capsule->addConnection([
     'prefix' => '',
 ]);
 
+$capsule->setEventDispatcher(new Dispatcher(new Container));
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
 
 $capsule->setEvetDispatcher(new Dispatcher(new Container));
 $capsule->setAsGlobal();
