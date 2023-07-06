@@ -41,6 +41,38 @@
                   @endforeach
                 </select>
             </div>
+            <!-- radio -->
+            <p>Jenis</p>
+            <div class="form-check form-check-inline">
+              @if($jenis == 0)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Berita" required>
+              @endif
+              <label class="form-check-label" for="flexRadioDefault1">
+                Berita
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              @if($jenis == 1)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Tutorial" required>
+              @endif
+              <label class="form-check-label" for="flexRadioDefault1">
+                Tutorial
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              @if($jenis == 2)
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required checked>
+              @else
+                <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault1" value="Blog" required>
+              @endif
+              <label class="form-check-label" for="flexRadioDefault1">
+                Blog
+              </label>
+            </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Artikel</label>
                 <textarea class="form-control" id="nama" name="artikel" rows="3"></textarea>

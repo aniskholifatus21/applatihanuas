@@ -38,6 +38,37 @@
         <h2 class="text-body-emphasis">Tampil Input Data</h2>
         <a href="{{ site_url('Welcome/index') }}" class="btn btn-success">Tambah</a>
       </div>
+      <td scope="col">#</td>
+              <td scope="col">Username</td>
+              <td scope="col">Email</td>
+              <td scope="col">Artikel</td>
+              <td scope="col">Jenis</td>
+              <td scope="col">Created at</td>
+              <td scope="col">Updated at</td>
+              <td scope="col">Action</td>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($post_list as $post)
+            <tr>
+              <td scope="row">-</td>
+              <td>{{ $post->user->username }}</td>
+              <td>{{ $post->user->email }}</td>
+              <td>{{ $post->article }}</td>
+              <td>{{ $post->jenis }}</td>
+              <td>{{ $post->created_at }}</td>
+              <td>{{ $post->updated_at }}</td>
+              <td>
+                <a href="{{ site_url('Welcome/hapus/' . $post->id) }}" class="btn btn-danger">Delete</a>
+                <a href="{{ site_url('Welcome/edit/' . $post->id) }}" class="btn btn-info">Edit</a>
+              </td>
+            </tr>
+            @endforeach
+            </tbody>
+        </table>
+        <a href="{{ site_url('Welcome/index') }}" class="btn btn-success">Tambah</a>
+      </div>
+    </div>
     </div>
   </main>
   <footer class="pt-5 my-5 text-body-secondary border-top">
